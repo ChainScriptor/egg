@@ -23,26 +23,17 @@ const VideoSection: React.FC = () => {
           <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-secondary rounded-full border-4 border-dark -z-10 animate-float"></div>
 
           {/* Video Container with Cartoon Border */}
-          <div className="cartoon-card bg-dark rounded-[2.5rem] overflow-hidden aspect-video flex items-center justify-center relative">
-            {/* 
-                Αντικαταστήστε το παρακάτω src με το δικό σας βίντεο (π.χ. .mp4) 
-                ή χρησιμοποιήστε ένα iframe για YouTube/Vimeo.
-            */}
+          <div className="cartoon-card bg-dark rounded-[2.5rem] overflow-hidden aspect-video relative">
             <video 
-              className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
-              controls
-              poster="https://images.unsplash.com/photo-1587486914402-038583739e37?auto=format&fit=crop&q=80&w=1200"
+              className="w-full h-full object-cover"
+              autoPlay
+              loop
+              muted
+              playsInline
             >
-              <source src="YOUR_VIDEO_URL_HERE.mp4" type="video/mp4" />
+              <source src="/vid.mp4" type="video/mp4" />
               Το πρόγραμμα περιήγησής σας δεν υποστηρίζει την αναπαραγωγή βίντεο.
             </video>
-
-            {/* Overlay if no video playing */}
-            <div className="absolute inset-0 pointer-events-none flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
-               <div className="w-24 h-24 bg-white/20 backdrop-blur-sm rounded-full border-4 border-white flex items-center justify-center">
-                  <div className="w-0 h-0 border-t-[15px] border-t-transparent border-l-[25px] border-l-white border-b-[15px] border-b-transparent ml-2"></div>
-               </div>
-            </div>
           </div>
           
           <div className="mt-8 flex justify-center gap-8">
@@ -51,8 +42,8 @@ const VideoSection: React.FC = () => {
                <span className="font-cartoon font-bold text-sm mt-2">4K Ποιότητα</span>
             </div>
             <div className="flex flex-col items-center">
-               <span className="text-3xl">🔊</span>
-               <span className="font-cartoon font-bold text-sm mt-2">Με Ήχο</span>
+               <span className="text-3xl">🔄</span>
+               <span className="font-cartoon font-bold text-sm mt-2">Συνεχής Αναπαραγωγή</span>
             </div>
             <div className="flex flex-col items-center">
                <span className="text-3xl">⏱️</span>

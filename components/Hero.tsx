@@ -49,37 +49,21 @@ const Hero: React.FC = () => {
 
         <div className="relative flex justify-center">
           <div className="relative z-10 animate-float">
-            <div className="relative w-72 h-84 lg:w-[400px] lg:h-[500px] bg-white/90 backdrop-blur-md rounded-[50%_50%_45%_45%] border-[6px] border-dark shadow-[15px_15px_0px_rgba(0,0,0,0.15)] flex flex-col items-center justify-center overflow-hidden">
-               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent opacity-60"></div>
-               
-               {/* Character Face */}
-               <div className="absolute top-1/4 flex flex-col items-center z-20">
-                  <div className="flex gap-10 mb-4">
-                    <div className="w-10 h-10 bg-dark rounded-full flex items-center justify-center">
-                       <div className="w-3 h-3 bg-white rounded-full -mt-2 -ml-2"></div>
-                    </div>
-                    <div className="w-10 h-10 bg-dark rounded-full flex items-center justify-center">
-                       <div className="w-3 h-3 bg-white rounded-full -mt-2 -ml-2"></div>
-                    </div>
-                  </div>
-                  <div className="w-10 h-10 bg-orange-500 rounded-lg border-4 border-dark rotate-45 shadow-lg"></div>
-               </div>
-
-               {/* Indicator Scale */}
-               <div className="absolute bottom-12 flex flex-col gap-3 w-full px-12 z-20">
-                  <div className="bg-dark text-white font-cartoon font-bold py-2 px-4 rounded-xl border-4 border-dark text-center text-sm transform -rotate-2">HARD</div>
-                  <div className="bg-secondary text-dark font-cartoon font-bold py-2 px-4 rounded-xl border-4 border-dark text-center text-sm transform rotate-1">MEDIUM</div>
-                  <div className="bg-accent text-dark font-cartoon font-bold py-3 px-4 rounded-xl border-4 border-dark text-center text-sm transform -rotate-1 shadow-[4px_4px_0px_#1A1A1A]">SOFT</div>
-               </div>
-
-               {/* Steam */}
-               <div className="absolute bottom-4 flex gap-4">
-                  {[1,2,3].map(i => <div key={i} className="steam w-3 h-3 bg-dark/20 rounded-full" style={{ animationDelay: `${i*0.5}s` }}></div>)}
-               </div>
+            <div className="relative w-72 h-84 lg:w-[400px] lg:h-[500px] bg-white/90 backdrop-blur-md rounded-[2.5rem] border-[6px] border-dark shadow-[15px_15px_0px_rgba(0,0,0,0.15)] overflow-hidden cartoon-card">
+              <video 
+                className="w-full h-full object-cover"
+                autoPlay
+                loop
+                muted
+                playsInline
+              >
+                <source src="/vid2.mp4" type="video/mp4" />
+                Το πρόγραμμα περιήγησής σας δεν υποστηρίζει την αναπαραγωγή βίντεο.
+              </video>
             </div>
 
             {/* Floaties */}
-            <div className="absolute -top-6 -right-6 bg-accent p-4 rounded-2xl cartoon-card font-cartoon font-bold text-dark rotate-[12deg] text-sm">
+            <div className="absolute -top-6 -right-6 bg-accent p-4 rounded-2xl cartoon-card font-cartoon font-bold text-dark rotate-[12deg] text-sm z-20">
                -50% ΜΟΝΟ <br/> ΓΙΑ ΣΗΜΕΡΑ! 🏷️
             </div>
           </div>
